@@ -27,6 +27,6 @@ RUN mkdir ~/code
 
 RUN cd ~/code
 
-COPY ['./index.js','~/code/index.js']
+COPY ./index.js ~/code/index.js'
 
 CMD [ "node","~/code/index.js"]
