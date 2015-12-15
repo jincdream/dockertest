@@ -28,6 +28,6 @@ RUN mkdir ~/code
 
 COPY . ~/code/
 
-RUN cd ~/code &&npm i -g pm2 && npm i
+RUN cd ~/code && npm i -g pm2 && npm i
 
-CMD [ "node","~/code/index.js"]
+CMD [ "pm2","start","~/code/pm2.json"]
