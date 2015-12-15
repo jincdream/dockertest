@@ -23,14 +23,10 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
 
-RUN mkdir ~/code
-
-COPY ./ ~/code/
-
-RUN cd ~/code && ls
+COPY . /code/
 
 RUN npm install -g pm2
 
-RUN npm install
+RUN cd /code && npm install
 
-CMD [ "pm2","start","~/code/pm2.json"]
+CMD [ "pm2","start","/code/pm2.json"]
