@@ -1,0 +1,43 @@
+{
+  "name": "dockertest",
+  "version": "1.0.0",
+  "description": "j & l blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jincdream/dockertest.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "jincdream <275727449@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jincdream/dockertest/issues"
+  },
+  "homepage": "https://github.com/jincdream/dockertest#readme",
+  "dependencies": {
+    "babel-core": "^6.2.1",
+    "babel-plugin-syntax-async-functions": "^6.1.18",
+    "babel-polyfill": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-3": "^6.1.18",
+    "handlebars": "^4.0.5",
+    "koa": "^2.0.0-alpha.3",
+    "koa-bodyparser": "^2.0.1",
+    "koa-compress": "^1.0.8",
+    "koa-convert": "^1.2.0",
+    "koa-router": "^7.0.0",
+    "koa-static-cache": "^3.1.3",
+    "mz": "^2.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-3"
+    ]
+  }
+}

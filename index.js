@@ -1,6 +1,7 @@
-'use strict'
-var http = require('http');
-http.createServer(function(req,res){
-  res.end('docker webhook')
-  console.log('co')
-}).listen('8099')
+'use strict';
+
+// http://babeljs.io/docs/setup/#babel_register
+
+require('babel-core/register');
+require("babel-polyfill")
+require('./app.js');

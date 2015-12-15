@@ -1,0 +1,22 @@
+{
+    // Application #1
+    "name": "blog",
+    "script": "index.js",
+    // "args"        : ["--toto=heya coco", "-d", "1"],
+    "watch": true,
+    "node_args": "--harmony",
+    "merge_logs": true,
+    "ignore_watch": [
+        "code/dev",
+        "code/release/public",
+        "code/fis-conf.js",
+        "node_modules",
+        "code/release/view",
+        "code/release/map.js"
+    ],
+    // "cwd"         : "/this/is/a/path/to/start/script",
+    "env": {
+        "NODE_ENV": "dev",
+        "AWESOME_SERVICE_API_TOKEN": "xxx"
+    }
+}
