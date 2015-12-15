@@ -31,4 +31,4 @@ RUN cd /code && npm install
 
 EXPOSE 8099
 
-CMD [ "pm2","start","/code/pm2.json"]
+CMD [ "pm2","start","pm2.json"]
