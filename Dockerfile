@@ -30,4 +30,5 @@ RUN npm install -g pm2
 RUN cd /code && npm install
 
 EXPOSE 8099
+
 CMD [ "pm2","start","/code/pm2.json"]
