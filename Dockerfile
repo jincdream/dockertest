@@ -25,8 +25,12 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 RUN mkdir ~/code
 
-COPY . ~/code/
+COPY ./ ~/code/
 
-RUN cd ~/code && npm i -g pm2 && npm i
+RUN cd ~/code && ls
+
+RUN npm install -g pm2
+
+RUN npm install
 
 CMD [ "pm2","start","~/code/pm2.json"]
