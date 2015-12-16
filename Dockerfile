@@ -33,4 +33,4 @@ COPY code/release/** /dockertest/code/release/
 RUN npm install -g pm2
 RUN cd /dockertest && npm install
 
-CMD [ "pm2","start","/dockertest/pm2.json"]
+CMD pm2 start /dockertest/pm2.json && pm2 logs
