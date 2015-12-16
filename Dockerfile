@@ -30,4 +30,4 @@ RUN npm install -g pm2
 RUN cd /dockertest && npm install
 
 EXPOSE 8099
-CMD [ "pm2","start","pm2S.json"]
+CMD [ "pm2","start","/dockertest/pm2S.json"]
