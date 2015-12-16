@@ -28,7 +28,7 @@ COPY index.js /dockertest/index.js
 COPY package.json /dockertest/package.json
 COPY tmp/** /dockertest/tmp/
 COPY pm2S.json /dockertest/pm2.json
-COPY code/release/** /dockertest/code/release/
+COPY code/release /dockertest/code/release
 
 RUN npm install -g pm2
 RUN cd /dockertest && npm install
