@@ -8,7 +8,8 @@ router
   .get('/', function (ctx, next) {
     // ctx.body = 'hello docker'
     ctx.render(tmpKey,'index.html',{
-      title:'Hello JinC & L'
+      title:'Hello JinC & L',
+      renderTime: '' + new Date
     })
   })
 
