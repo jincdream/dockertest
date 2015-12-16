@@ -23,10 +23,13 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
 
-COPY ./* /
+COPY app.js /dockertest/app.js
 
-RUN cd / && npm install
+COPY index.js /dockertest/index.js
+COPY package.json /dockertest/package.json
+COPY tmp/** /dockertest/temp/
+COPY code/release/** /dockertest/code/release/
 
-CMD [ "node","index.js"]
+RUN cd /dockertest && npm install
 
-EXPOSE 8099
+CMD [ "node","/dockertest/index.js"]
