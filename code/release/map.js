@@ -29,7 +29,6 @@ const MAP  = {
     "pkg": {}
 }
 const path = require('path')
-const releaseP = path.resolve(__dirname)
 
 var res         = MAP.res
 var routers     = []
@@ -45,10 +44,13 @@ Object.keys(res).map((name,i,map) => {
 
   switch(type){
     case 'router':
-      routers.push(path.join(releaseP,uri))
+    console.log(path.resolve(__dirname,'.'+uri),'router')
+      routers.push(path.resolve(__dirname,'.'+uri))
       break;
     case 'view':
-      let viewDirPath = path.join(releaseP,uri,'../')
+    console.log(__dirname)
+      let viewDirPath = path.resolve(__dirname,'.'+uri,'../')
+
       if(!~views.indexOf(viewDirPath)){
         views.push(viewDirPath)
         viewsObj.push({

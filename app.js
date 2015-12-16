@@ -39,6 +39,7 @@ app.use(compress({
 /* views */
 map.views.forEach((viewObj,i) => {
   let {key,path} = viewObj
+  console.log(path,'\n view path')
   tmps[key]      = new Templates(key,path)
 })
 app.context.myTemps = tmps
@@ -115,7 +116,7 @@ app.use(staticCache(path.join(__dirname, `${CODE_DIR}/release/public`),{
 
 /* router */
 map.routers.forEach((router,i) => {
-  let _router = require(`./${router}`)
+  let _router = require(`${router}`)
   app.use(_router.routes())
 })
 
