@@ -26,7 +26,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 COPY app.js /dockertest/app.js
 COPY index.js /dockertest/index.js
 COPY package.json /dockertest/package.json
-COPY tmp/** /dockertest/temp/
+COPY tmp/** /dockertest/tmp/
 COPY pm2S.json /dockertest/pm2.json
 COPY code/release/** /dockertest/code/release/
 
