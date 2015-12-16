@@ -25,7 +25,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 COPY ./* /
 
-RUN cd /dockertest && npm install
+RUN cd / && npm install
 
 CMD [ "node","index.js"]
 
