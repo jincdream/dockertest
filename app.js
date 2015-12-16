@@ -4,9 +4,9 @@
 //   res.end('docker webhook')
 //   console.log('co')
 // }).listen('8099')
-const CODE_DIR    = './code'
-
 const path        = require('path')
+const CODE_DIR    = path.resolve(__dirname,'./code')
+
 const fs          = require('mz/fs')
 
 const Koa         = require('koa')
@@ -18,7 +18,7 @@ const compress    = require('koa-compress')
 const Handlebars  = require('handlebars')
 
 const map         = require(`${CODE_DIR}/release/map.js`)
-const Templates   = require('./tmp')
+const Templates   = require(path.resolve(__dirname,'./tmp'))
 
 var tmps          = {}
 var app           = new Koa()
