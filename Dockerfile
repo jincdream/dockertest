@@ -25,9 +25,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 
 COPY ./* /dockertest/
 
-RUN npm install -g pm2
-
 RUN cd /dockertest && npm install
 
 EXPOSE 8099
-CMD [ "pm2","start","/dockertest/pm2S.json"]
+CMD [ "node","/dockertest/index.js"]
