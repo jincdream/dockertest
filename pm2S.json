@@ -1,0 +1,18 @@
+{
+    // Application #1
+    "name": "blog",
+    "script": "/dockertest/index.js",
+    // "args"        : ["--toto=heya coco", "-d", "1"],
+    "watch": true,
+    "node_args": "--harmony",
+    "merge_logs": true,
+    "ignore_watch": [
+        "/dockertest/code/dev",
+        "/dockertest/code/release/public",
+        "/dockertest/code/fis-conf.js",
+        "/dockertest/node_modules",
+        "/dockertest/code/release/view",
+        "/dockertest/code/release/map.js"
+    ],
+    "cwd"         : "/dockertest/"
+}
