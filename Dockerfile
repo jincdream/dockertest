@@ -24,12 +24,13 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
 
 COPY app.js /dockertest/app.js
-
 COPY index.js /dockertest/index.js
 COPY package.json /dockertest/package.json
 COPY tmp/** /dockertest/temp/
+COPY pm2S.json /dockertest/pm2.json
 COPY code/release/** /dockertest/code/release/
 
+RUN npm install -g pm2
 RUN cd /dockertest && npm install
 
-CMD [ "node","/dockertest/index.js"]
+CMD [ "pm2","start","/dockertest/pm2.json"]
