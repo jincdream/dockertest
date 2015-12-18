@@ -111,6 +111,7 @@ app.use(async (ctx, next) => {
 console.log(path.join(__dirname, `${CODE_DIR}/release/public`))
 app.use(staticCache(path.join(__dirname, `${CODE_DIR}/release/public`),{
   prefix:'/public',
+  gzip:!0,
   maxAge: 0
 }))
 

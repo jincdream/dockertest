@@ -6,10 +6,54 @@
   <link rel="stylesheet" href="/public/blog/index/a.css">
 </head>
 <body>
-  <h1>{{title}}</h1>
+  <svg viewBox="0 0 600 300" class="svg-defs">
 
-  实现 github -> docker hub -> server 自动部署
-  <p>{{renderTime}}</p>
+    <!-- Symbol with text -->
+    <symbol id="s-text">
+      <text text-anchor="middle"
+            x="50%"
+            y="50%"
+            dy=".35em"
+            class="text"
+            >MOZK</text>    
+    </symbol>
+
+    <!-- Mask with text -->
+    <mask id="m-text"
+          maskunits="userSpaceOnUse"
+          maskcontentunits="userSpaceOnUse">
+      <rect
+            width="100%"
+            height="100%"
+            class="mask__shape">
+      </rect>
+      <use xlink:href="#s-text"
+           class="mask__text"
+           ></use>
+
+    </mask>
+  </svg>
+  <div class="box-with-text">
+    <!-- Container for video -->
+    <div class="text-fill">
+      <video class="video" src="http://7xpats.com1.z0.glb.clouddn.com/bokeh2.mp4" autoplay loop></video>
+    </div>
+
+    <!-- Visible SVG -->
+    <svg viewBox="0 0 600 300"
+         class="svg-inverted-mask">
+      <rect
+            width="100%"
+            height="100%"
+            mask="url(#m-text)"
+            class="shape--fill"/>
+      <use xlink:href="#s-text"
+           class="text--transparent"
+           ></use>
+    </svg> 
+  </div>
+  <!-- 实现 github -> docker hub -> server 自动部署 -->
+  <!-- <p>{{renderTime}}</p> -->
   <script src="/public/blog/index/main.js"></script>
 <script type="text/javascript" charset="utf-8" src="http://192.168.16.193:8132/livereload.js"></script></body>
 </html>
