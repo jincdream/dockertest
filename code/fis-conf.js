@@ -70,12 +70,3 @@ fis
   useMap:!1,
   release:'map.js'
 })
-
-
-
-
-
-
-
-
-

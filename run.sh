@@ -1,0 +1,1 @@
+docker run --name nodeNG --link nodep:node -v ~/nginx.conf:/etc/nginx/nginx.conf -v ~/node.conf:/etc/nginx/node.conf:ro -v `pwd`/logs:/var/log/nginx -p 80:80 -d docker.io/nginx
