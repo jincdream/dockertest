@@ -21,10 +21,6 @@ const MAP  = {
             "uri": "/public/blog/index/main.js",
             "type": "js"
         },
-        "dev/blog/index/view/aaaa.html": {
-            "uri": "/view/blog/index/aaaa.html",
-            "type": "html"
-        },
         "dev/blog/index/view/index.html": {
             "uri": "/view/blog/index/index.html",
             "type": "html"
