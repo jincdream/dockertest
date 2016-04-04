@@ -24,6 +24,28 @@ const MAP  = {
         "dev/blog/index/view/index.html": {
             "uri": "/view/blog/index/index.html",
             "type": "html"
+        },
+        "dev/release/map.js": {
+            "uri": "/dev/release/map.js",
+            "type": "js",
+            "deps": [
+                "path"
+            ]
+        },
+        "dev/release/public/blog/index/a.css": {
+            "uri": "/dev/release/public/blog/index/a.css",
+            "type": "css"
+        },
+        "dev/release/public/blog/index/main.js": {
+            "uri": "/dev/release/public/blog/index/main.js",
+            "type": "js"
+        },
+        "dev/release/router/blog/index/index.js": {
+            "uri": "/dev/release/router/blog/index/index.js",
+            "type": "js",
+            "deps": [
+                "koa-router"
+            ]
         }
     },
     "pkg": {}
